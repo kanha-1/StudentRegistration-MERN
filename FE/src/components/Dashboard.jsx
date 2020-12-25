@@ -2,22 +2,27 @@ import React, { useEffect, useState } from "react";
 import Axios from "axios";
 import {Link} from "react-router-dom"
 function Dashboard() {
+	const [msg,setMessage] = useState('')
 	const [data, setData] = useState([]);
 	console.log(data)
 	useEffect(() => {
 		Axios.get(`http://localhost:5000/getallstudents`).then((result) => {
 			setData(result.data);
+			if(result.data.length === 0){
+				setMessage('No data found')
+			}
 		});
 	}, []);
 	return (
 		<div>
 				<h1 className="title">All Registered User</h1>
+				
 				<button>
 				<Link to="/">Back to register</Link>
 			</button>
 			<div>
+			<h1 className='message'>{msg}</h1>
 				{data.map((item) => {
-					console.log(item)
 					return (
 						<div className="parend_div">
 							<div className="img_div">

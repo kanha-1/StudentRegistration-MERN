@@ -78,7 +78,12 @@
   margin-left: 50px;
 }
 .error{
-  margin-left: 100px;
+  margin-left: 200px;
   color: rgb(102, 29, 29);
   font-weight: bold;
+}
+.message{
+  margin-top: 300px;
+  margin-left: 650px;
+  color: blueviolet;
 }

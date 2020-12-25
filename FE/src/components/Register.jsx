@@ -1,16 +1,16 @@
 import React, { useState } from "react";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
 import Axios from "axios";
 import Button from "@material-ui/core/Button";
-function Register(props) {
+function Register() {
 	// const history = useHistory()
-	const [msg, setMsg] = useState('');
+	const [msg, setMsg] = useState("");
 	const [image, setImage] = useState("");
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
 	const [qualif, setqualif] = useState("");
 	const [gender, setGender] = useState("");
-	
+
 	const onSubmit = (e) => {
 		e.preventDefault();
 		const data = new FormData();
@@ -33,14 +33,16 @@ function Register(props) {
 				})
 					.then((results) => {
 						console.log(results);
-						if(results.data.message === results.data.message){
-							setMsg(results.data.message)
+						if (results.data.message === results.data.message) {
+							setMsg(results.data.message);
+						}else if(results.data === results.data._id){
+							console.log('all good')
 						}
 					})
 					.catch((err) => {
 						console.log(err);
 					});
-				console.log(data);
+				// console.log(data);
 			})
 			.catch((err) => {
 				console.log(err);
@@ -53,7 +55,7 @@ function Register(props) {
 				<Link to="/dashboard">Dashboard</Link>
 			</button>
 			<form className="reg_form" onSubmit={onSubmit}>
-			<h2 className='error'>{msg}</h2>
+				<h2 className="error">{msg}</h2>
 				<div className="name">
 					<label> Enter your name : </label>
 					<input
@@ -82,7 +84,7 @@ function Register(props) {
 						name="qualif"
 						value={qualif}
 						onChange={(e) => setqualif(e.target.value)}>
-						<option>Select</option>
+						<option value="10th">select</option>
 						<option value="10th">10th</option>
 						<option value="12th">12th</option>
 						<option value="Graduate">Graduate</option>
@@ -116,13 +118,13 @@ function Register(props) {
 						onChange={(e) => setImage(e.target.files[0])}
 					/>
 				</div>
+
 				{/* <button type="submit">Submit</button> */}
-				<div className='button'>
-				<Button type="submit" variant="contained" color="primary">
-					Submit
-				</Button>
+				<div className="button">
+					<Button type="submit" variant="contained" color="primary">
+						Submit
+					</Button>
 				</div>
-				
 			</form>
 		</div>
 	);
