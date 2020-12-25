@@ -21,7 +21,7 @@ function Dashboard() {
 				<Link to="/">Back to register</Link>
 			</button>
 			<div>
-			<h1 className='message'>{msg}</h1>
+			<span className='message'>{msg}</span>
 				{data.map((item) => {
 					return (
 						<div className="parend_div">
