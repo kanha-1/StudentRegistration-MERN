@@ -19,7 +19,7 @@ routers.post("/Register", async (req, res) => {
 	});
 	try {
 		const savedStudent = await student.save();
-		res.status(200).json({message:"all saved",user:savedStudent});
+		res.status(200).json({message:"Register successfully",user:savedStudent});
 	} catch (err) {
 		res.status(400).send(err.message);
 	}

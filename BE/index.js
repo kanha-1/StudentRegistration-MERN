@@ -3,6 +3,7 @@ const app = express()
 const cors = require("cors");
 PORT = process.env.PORT || 5000
 require('./db')
+
 var whitelist = ["http://localhost:3000",];
 var corsOptions = {
 	credentials: true, //to allow cookes from front-end

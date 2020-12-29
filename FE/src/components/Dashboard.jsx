@@ -24,7 +24,7 @@ function Dashboard() {
 			<span className='message'>{msg}</span>
 				{data.map((item) => {
 					return (
-						<div className="parend_div">
+						<div className="parent_div">
 							<div className="img_div">
 								<img src={item.image} alt="user image" />
 							</div>
@@ -34,7 +34,7 @@ function Dashboard() {
 								<h3>Qualifcation :{item.qualif}</h3>
 								<h3>Gender: {item.gender}</h3>
 							</div>
-							<p>Time: {item.createdAt}</p>
+							{/* <p className='time_stamp'>Time: {item.createdAt}</p> */}
 						</div>
 					);
 				})}

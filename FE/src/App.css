@@ -8,7 +8,7 @@
   border: 1px solid black;
   height: 600px;
   width: 600px;
-  background-color: blueviolet;
+  background-color: rgb(154, 97, 207);
   color: white;
   margin-top: 50px;
   margin: auto;
@@ -56,7 +56,7 @@
 .title{
   text-align: center;
 }
-.parend_div{
+.parent_div{
   margin-top: 20px;
   margin-left: 300px;
   border: 1px solid black;
@@ -79,12 +79,15 @@
   margin-left: 50px;
 }
 .error{
-  margin-left: 200px;
-  color: rgb(102, 29, 29);
+  width:fit-content;
+  color: rgb(255, 5, 5);
   font-weight: bold;
 }
 .message{
   margin-top: 300px;
   margin-left: 650px;
   color: blueviolet;
+}
+.time_stamp{
+  margin-left: 5px;
 }

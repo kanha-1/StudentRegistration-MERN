@@ -10,7 +10,6 @@ function Register() {
 	const [email, setEmail] = useState("");
 	const [qualif, setqualif] = useState("");
 	const [gender, setGender] = useState("");
-
 	const onSubmit = (e) => {
 		e.preventDefault();
 		const data = new FormData();
